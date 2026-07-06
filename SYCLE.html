@@ -154,13 +154,19 @@
                 <p id="bikeSummary" style="margin:8px 0 0 0; color:#2e7d32; font-weight:600;font-size:16px;">Keep your weekly mileage climbing.</p>
             </div>
             <div style="margin-top:30px; padding:20px; background-color:#f5f5f5; border-radius:8px;">
-                <h3 style="margin:0 0 15px 0;">Quick Actions</h3>
+                <h3 style="margin:0 0 15px 0;font-family:monospace;font-size:18px;">Quick Actions</h3>
                 <div style="display:flex; gap:10px; flex-wrap:wrap;">
-                    <button onclick="downloadUserData()" style="padding:10px 20px; background-color:#4CAF50; color:white; border:none; border-radius:4px; cursor:pointer;">Download My Data</button>
-                    <button onclick="toggleProfileForm()" style="padding:10px 20px; background-color:#2196F3; color:white; border:none; border-radius:4px; cursor:pointer;">Update Profile</button>
-                    <button id="trailsButton" style="padding:10px 20px; background-color:orange; color:white; border:none; border-radius:4px; cursor:pointer;">Locate Trails</button>
+                    <button onclick="downloadUserData()" style="padding:10px 20px; background-color:#4CAF50; color:black; font: size 16px; border-radius:4px; cursor:pointer;font-family:monospace;">Download My Data</button>
+                    <button onclick="toggleProfileForm()" style="padding:10px 20px; background-color:#2196F3; color:black; font-size:16 px; border-radius:4px; cursor:pointer;font-family: monospace;">Update Profile</button>
+                    <button id="trailsButton" style="padding:10px 20px; background-color:orange; color:black;font-size:medium; font-size:16 px; border-radius:4px; cursor:pointer;font-family:monospace">Locate Trails</button>
                     <script>
                         document.getElementById("trailsButton").addEventListener("click", function() {
+                        alert("Feature coming soon!");
+                        });
+                    </script>
+                    <button id="locateWork" style="padding:10px 20px; background-color:yellowgreen; color:black;font-size:16 px;; border-radius:4px; cursor:pointer;font-family: monospace;">Find Your Path to Work</button>
+                    <script>
+                        document.getElementById("locateWork").addEventListener("click", function() {
                         alert("Feature coming soon!");
                         });
                     </script>
@@ -230,7 +236,7 @@
       container.innerHTML = `
         <div style="display:flex; align-items:center; gap:15px;">
           <span class="welcome-message">Welcome, ${user.firstName}!</span>
-          <button onclick="handleLogout()" style="padding:10px 20px; cursor:pointer; background-color:#ff6b6b; color:white; border:none; border-radius:4px;">Logout</button>
+          <button onclick="handleLogout()" style="padding:10px 20px; cursor:pointer; background-color:#ff6b6b; color:black; border:2px solid black; border-radius:4px; font-family:monospace">Logout</button>
         </div>
       `;
       contactFormSection.style.display = 'none';
@@ -238,7 +244,7 @@
       dashboardSection.style.display = 'block';
     } else {
       container.innerHTML = `
-        <button onclick="toggleLoginForm()" style="padding:10px 20px; cursor:pointer; background-color:#4CAF50; color:black; border-style:solid; border-radius:4px;border-color:black; font-family:monospace;">Login</button>
+        <button onclick="toggleLoginForm()" style="padding:10px 20px; cursor:pointer; background-color:#4CAF50; color:black; border:2px solid black; border-radius:4px; font-family:monospace;">Login</button>
       `;
       contactFormSection.style.display = 'block';
       letConnectHeader.style.display = 'block';
