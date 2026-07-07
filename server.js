@@ -1,10 +1,13 @@
 const express = require('express');
 const cors = require('cors');
-const fs = require('fs');
-const path = require('path');
+
 
 const app = express();
 const PORT = process.env.PORT || 3001;
+
+app.get("/", (req, res) => {
+    res.send("BISYCLE Backend API is running!");
+});
 
 const allowedOrigins = [
     "http://localhost:3000",
