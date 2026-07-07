@@ -10,7 +10,6 @@ app.get("/", (req, res) => {
 });
 
 const allowedOrigins = [
-    "http://localhost:3000",
     "https://ayushp254-sycle.vercel.app"
 ];
 
