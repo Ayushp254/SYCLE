@@ -136,7 +136,7 @@ app.put("/users/:id", (req, res) => {
   return res.status(200).json({ message: 'User updated successfully.', user: users[userIndex] });
 });
 
-app.get('/api/users', (req, res) => {
+app.get('/users', (req, res) => {
   const users = loadUsers();
   res.json(users.map(({ password, ...rest }) => rest));
 });
