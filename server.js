@@ -92,7 +92,7 @@ app.post("/login", (req, res) => {
   return res.status(200).json({ message: 'Login successful.', user: { id: user.id, firstName: user.firstName, lastName: user.lastName, email: user.email, phone: user.phone, address: user.address, zipcode: user.zipcode, city: user.city, state: user.state, country: user.country, option: user.option } });
 });
 
-app.put("/users/:id", (req, res) => {
+app.put("/users", (req, res) => {
   const { id } = req.params;
   const { firstName, lastName, phone, address, city, state, country, email, password } = req.body;
 
