@@ -19,7 +19,7 @@ const allowedOrigins = [
 
 app.use(cors({
     origin: allowedOrigins,
-    methods:['GET','POST'],
+    methods:['GET','POST','PUT'],
     credentials: true
 }));
 
@@ -140,7 +140,7 @@ app.put("/users", (req, res) => {
   return res.status(200).json({ message: 'User updated successfully.', user: users[userIndex] });
 });
 
-app.get('/users', (req, res) => {
+app.get("/users/:id",, (req, res) => {
   const users = loadUsers();
   res.json(users.map(({ password, ...rest }) => rest));
 });
