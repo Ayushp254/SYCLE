@@ -140,7 +140,7 @@ app.put("/users", (req, res) => {
   return res.status(200).json({ message: 'User updated successfully.', user: users[userIndex] });
 });
 
-app.get("/users/:id",, (req, res) => {
+app.get("/users/:id", (req, res) => {
   const users = loadUsers();
   res.json(users.map(({ password, ...rest }) => rest));
 });
