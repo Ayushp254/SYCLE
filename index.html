@@ -496,7 +496,7 @@
     }
 
     try {
-      const response = await fetch("https://bisycle.onrender.com/${user.id}", {
+      const response = await fetch(`https://bisycle.onrender.com/${user.id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
