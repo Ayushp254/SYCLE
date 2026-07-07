@@ -1,6 +1,9 @@
-const express = require('express');
-const cors = require('cors');
+const express = require("express");
+const cors = require("cors");
+const fs = require("fs");
+const path = require("path");
 
+const DATA_FILE = path.join(__dirname, "users.json");
 
 const app = express();
 const PORT = process.env.PORT || 3001;
