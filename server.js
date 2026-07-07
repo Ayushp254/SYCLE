@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 3001;
 
 const allowedOrigins = [
     "http://localhost:3000",
-    "https://your-project.vercel.app"
+    "https://ayushp254-sycle.vercel.app"
 ];
 
 app.use(cors({
